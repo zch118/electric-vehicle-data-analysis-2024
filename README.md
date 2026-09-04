@@ -37,7 +37,7 @@
 
 ## 📁 项目结构
 
-`
+```
 electric-vehicle-data-analysis-2024/
 ├── dashboard/                  # HTML交互式看板
 │   └── index.html             # 6模块+预测模拟器
@@ -57,7 +57,7 @@ electric-vehicle-data-analysis-2024/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-`
+```
 
 ---
 
