@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Data files (large)
+data/raw/*.csv
+data/processed/*.csv
+
+# Database
+database/*.db
+
+# Excel reports (generated)
+reports/excel/*.xlsx
+
+# Model files (large)
+models/*.pkl
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log
