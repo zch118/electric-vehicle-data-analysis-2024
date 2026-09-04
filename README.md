@@ -20,7 +20,7 @@
 | **全栈技术** | SQL + Python + Excel + HTML，覆盖数据工程到可视化全流程 |
 | **星型模型** | SQLite构建4维度表+1事实表的标准星型模型，含索引优化 |
 | **AI特征融合** | 从车主评论提取智驾/内饰/续航/电池焦虑等7个体验维度 |
-| **模型性能** | 随机森林回归模型R²=0.7075，MAE= + "" + '' + "" + @" |
+| **模型性能** | 随机森林回归模型R²=0.7075，MAE=`$933` |
 | **交互式看板** | 6大模块+保值率预测模拟器，纯前端实现无需后端 |
 | **自动化报告** | 6工作表Excel报告+图表+数据筛选，一键生成 |
 
@@ -83,7 +83,7 @@ electric-vehicle-data-analysis-2024/
 ### 4️⃣ 建模与评估
 - **模型构建**：随机森林回归模型（100棵树，最大深度15）
 - **特征工程**：车龄、续航、年份、品牌、7大AI体验特征
-- **模型评估**：R²=0.7075，MAE= + "" + '' + "" + @"
+- **模型评估**：R²=0.7075，MAE=`$933`
 - **特征重要性分析**：识别品牌、车龄、年份为TOP3影响因素
 
 ### 5️⃣ 可视化与报告
@@ -97,15 +97,15 @@ electric-vehicle-data-analysis-2024/
 
 | 模块 | 功能 | 状态 |
 |------|------|------|
-|  + "" + 'main.py' + "" + @" | 6步流水线主程序入口 | ✅ |
-|  + "" + 'config.py' + "" + @" | 配置管理、路径定义 | ✅ |
-|  + "" + 'data_cleaner.py' + "" + @" | 数据清洗、AI特征合并、特征工程 | ✅ |
-|  + "" + 'db_manager.py' + "" + @" | SQLite建表、数据导入、聚合查询 | ✅ |
-|  + "" + 'eda_analyzer.py' + "" + @" | 多维度EDA分析、统计报告 | ✅ |
-|  + "" + 'excel_report.py' + "" + @" | 6工作表自动化Excel报告生成 | ✅ |
-|  + "" + 'model_trainer.py' + "" + @" | 模型训练、评估、保存、加载、预测 | ✅ |
-|  + "" + '01_create_tables.sql' + "" + @" | 星型模型建表脚本 | ✅ |
-|  + "" + '02_analysis_queries.sql' + "" + @" | 10+高级分析查询 | ✅ |
+| `main.py` | 6步流水线主程序入口 | ✅ |
+| `config.py` | 配置管理、路径定义 | ✅ |
+| `data_cleaner.py` | 数据清洗、AI特征合并、特征工程 | ✅ |
+| `db_manager.py` | SQLite建表、数据导入、聚合查询 | ✅ |
+| `eda_analyzer.py` | 多维度EDA分析、统计报告 | ✅ |
+| `excel_report.py` | 6工作表自动化Excel报告生成 | ✅ |
+| `model_trainer.py` | 模型训练、评估、保存、加载、预测 | ✅ |
+| `01_create_tables.sql` | 星型模型建表脚本 | ✅ |
+| `02_analysis_queries.sql` | 10+高级分析查询 | ✅ |
 
 ---
 
@@ -113,28 +113,28 @@ electric-vehicle-data-analysis-2024/
 
 ### 1. 安装依赖
 
-`ash
+```bash
 pip install -r requirements.txt
-`
+```
 
 ### 2. 准备数据
 
-将原始数据CSV放入  + "" + 'data/raw/' + "" + @" 目录：
--  + "" + 'Electric_Vehicle_Population_Data.csv' + "" + @"（原始车辆登记数据）
--  + "" + 'ev_with_ai_features_real.csv' + "" + @"（AI体验特征数据）
+将原始数据CSV放入 `data/raw/` 目录：
+- `Electric_Vehicle_Population_Data.csv`（原始车辆登记数据）
+- `ev_with_ai_features_real.csv`（AI体验特征数据）
 
 ### 3. 运行完整流水线
 
-`ash
+```bash
 cd src/python
 python main.py
-`
+```
 
 ### 4. 查看产物
 
-- **HTML看板**：用浏览器打开  + "" + 'dashboard/index.html' + "" + @"
-- **Excel报告**：打开  + "" + 'reports/excel/EV_Analysis_Report.xlsx' + "" + @"
-- **SQL数据库**： + "" + 'database/ev_analysis.db' + "" + @"（可用DB Browser for SQLite查看）
+- **HTML看板**：用浏览器打开 `dashboard/index.html`
+- **Excel报告**：打开 `reports/excel/EV_Analysis_Report.xlsx`
+- **SQL数据库**： `database/ev_analysis.db`（可用DB Browser for SQLite查看）
 
 ---
 
@@ -179,7 +179,7 @@ python main.py
 | **目标变量** | 指导价（Base MSRP） |
 | **特征数** | 12个（车龄/续航/年份/品牌+7大AI特征） |
 | **R² Score** | **0.7075** |
-| **MAE** | ** + "" + '' + "" + @"** |
+| **MAE** | **`$933`** |
 | **训练数据** | 3,425条有效MSRP记录 |
 
 ### 特征重要性 TOP 5
@@ -241,7 +241,7 @@ python main.py
 > **核心工作**：
 > - 使用Python（Pandas/Numpy）完成13.5万条数据清洗、特征工程和EDA分析，处理MSRP仅2.5%、续航仅57.8%的数据缺失问题
 > - 使用SQLite构建星型数据模型（4维度表+1事实表），编写10+高级分析查询，含索引优化
-> - 训练随机森林保值率预测模型（R²=0.7075，MAE= + "" + '' + "" + @"），识别品牌(0.303)、车龄(0.248)、年份(0.222)为TOP3影响因素
+> - 训练随机森林保值率预测模型（R²=0.7075，MAE=`$933`），识别品牌(0.303)、车龄(0.248)、年份(0.222)为TOP3影响因素
 > - 使用openpyxl生成6工作表自动化Excel报告，含图表和数据筛选
 > - 使用HTML+Chart.js构建6模块交互式看板，含保值率预测模拟器和业务洞察模块
 > - 输出6大核心问题发现和短期/中期/长期共15项业务建议
